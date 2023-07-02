@@ -88,6 +88,11 @@ bool namesMatchAllowableEdgeCases(const QString& input_name,
     if (input_name == "MIDIIN2 (Ableton Push)" && output_name == "MIDIOUT2 (Ableton Push)") {
         return true;
     }
+    // Novation Launchkey Mini MK3 on Windows
+    // Shows 2 different devices for MIDI input and output.
+    if (input_name == "MIDIIN2 (Launchkey Mini MK3 MID" && output_name == "MIDIOUT2 (Launchkey Mini MK3 MI") {
+        return true;
+    }
     return false;
 }
 
